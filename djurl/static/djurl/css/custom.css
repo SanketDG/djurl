@@ -3,10 +3,6 @@
     margin-bottom: 60px;
 }
 
-a:hover{
-    text-decoration: none;
-}
-
 header {
     border-bottom: 1px solid #eeeeee;
     margin-bottom: 30px;
@@ -15,12 +11,15 @@ header {
 }
 
 #wrap {
-    max-width: 700px;
     margin: 5px 10px 10px 10px;
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 #url-result {
-    color: #00e000;
+    color: #039be5;
     display: hidden;
+}
+
+.btn {
+    float: right;
 }
