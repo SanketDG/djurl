@@ -1,9 +1,9 @@
-# djurl
+# Dj-URL
 
 An url shortener built using Django.
 Uses [Materialize](http://materializecss.com) for the UI.
 
-![Imgur](http://i.imgur.com/sm773dDl.png)
+![Screenshot](http://i.imgur.com/Sr4vtKc.png)
 
 ### Demo
 
