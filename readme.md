@@ -1,6 +1,9 @@
 # djurl
 
 An url shortener built using Django.
+Uses [Materialize](http://materializecss.com) for the UI.
+
+![Imgur](http://i.imgur.com/sm773dDl.png)
 
 ### Demo
 
