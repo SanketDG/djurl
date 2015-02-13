@@ -84,7 +84,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-SITE_URL = "djurl.herokuapp.com"
+SITE_URL = "http://djurl.herokuapp.com"
 
 # Parse database configuration from $DATABASE_URL
 DATABASES['default'] = dj_database_url.config()
