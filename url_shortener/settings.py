@@ -54,6 +54,8 @@ ROOT_URLCONF = 'url_shortener.urls'
 
 WSGI_APPLICATION = 'url_shortener.wsgi.application'
 
+DJANGO_SETTINGS_MODULE = 'url_shortener.settings'
+
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
