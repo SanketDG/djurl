@@ -84,10 +84,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-SITE_URL = "http://djurl.herokuapp.com"
+SITE_URL = "http://localhost:8000/"
 
 # Parse database configuration from $DATABASE_URL
-DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] = dj_database_url.config(
+    default='postgres://sanket:kamehameha@localhost:5432/urls')
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
