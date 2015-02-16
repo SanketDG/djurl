@@ -29,6 +29,7 @@ function returnSuccess(data, textStatus, jqXHR) {
  if(data.url) {
  $('#url-result').text(data.url);
  $('#url').val("");
+ $("a").attr("href", data.url)
  } else {
  $('#url-result').text("Please enter a URL");
  }
