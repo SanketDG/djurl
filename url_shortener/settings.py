@@ -84,7 +84,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-SITE_URL = "http://localhost:8000/"
+SITE_URL = "http://localhost:8000"
 
 # Parse database configuration from $DATABASE_URL
 DATABASES['default'] = dj_database_url.config(
