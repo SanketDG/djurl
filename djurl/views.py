@@ -1,7 +1,7 @@
 import random
 import string
 import json
-from djurl.models import Urls
+from djurl.models import Url
 from django.http import HttpResponseRedirect, HttpResponse
 from django.conf import settings
 from django.core.context_processors import csrf
@@ -16,7 +16,7 @@ def index(request):
 
 def redirect_original(request, short_id):
     # get object, if not found return 404 error
-    url = get_object_or_404(Urls, pk=short_id)
+    url = get_object_or_404(Url, pk=short_id)
     url.count += 1
     url.save()
     return HttpResponseRedirect(url.httpurl)
@@ -26,7 +26,7 @@ def shorten_url(request):
     url = request.POST.get("url", '')
     if not (url == ''):
         short_id = get_short_code()
-        b = Urls(httpurl=url, short_id=short_id)
+        b = Url(httpurl=url, short_id=short_id)
         b.save()
 
         response_data = {}
@@ -44,7 +44,7 @@ def get_short_code():
     while True:
         short_id = ''.join(random.choice(char) for x in range(length))
         try:
-            temp = Urls.objects.get(pk=short_id)
+            temp = Url.objects.get(pk=short_id)
             return temp
         except:
             return short_id
