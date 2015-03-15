@@ -25,7 +25,11 @@ def redirect_original(request, short_id):
 def shorten_url(request):
     url = request.POST.get("url", '')
     if not (url == ''):
-        short_id = get_short_code()
+        try:
+            url_present = Url.objects.get(httpurl=url)
+            short_id = url_present.short_id
+        except (Url.DoesNotExist):
+            short_id = get_short_code()
         b = Url(httpurl=url, short_id=short_id)
         b.save()
 
