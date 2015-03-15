@@ -3,7 +3,7 @@
 An url shortener built using Django.
 Uses [Materialize](http://materializecss.com) for the UI.
 
-![Screenshot](http://i.imgur.com/Sr4vtKc.png)
+![Screenshot](http://i.imgur.com/H7xzoie.png)
 
 ### Demo
 
