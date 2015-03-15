@@ -58,12 +58,12 @@ WSGI_APPLICATION = 'url_shortener.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -87,6 +87,7 @@ STATIC_URL = '/static/'
 SITE_URL = "http://localhost:8000"
 
 # Parse database configuration from $DATABASE_URL
+DATABASES = {}
 DATABASES['default'] = dj_database_url.config(
     default='postgres://sanket:kamehameha@localhost:5432/urls')
 

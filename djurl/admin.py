@@ -1,5 +1,5 @@
 from django.contrib import admin
-from djurl.models import Urls
+from djurl.models import Url
 # Register your models here.
 
 
@@ -8,4 +8,4 @@ class UrlsAdmin(admin.ModelAdmin):
     ordering = ('-pub_date',)
 
 # Register the Urls model with UrlsAdmin options
-admin.site.register(Urls, UrlsAdmin)
+admin.site.register(Url, UrlsAdmin)
