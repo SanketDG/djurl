@@ -33,13 +33,12 @@ header {
 }
 
 footer {
-    color: #fff;
-    background: #1565C0;
+    color: #039be5;
     text-align: center;
     height: 50px;
     line-height: 50px;
 }
 
 footer a{
-    color: #00BCFF;
+    color: #039be5;
 }
