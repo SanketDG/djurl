@@ -5,13 +5,13 @@ from djurl.models import Url
 from django.http import HttpResponseRedirect, HttpResponse
 from django.conf import settings
 from django.core.context_processors import csrf
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 
 
 def index(request):
     c = {}
     c.update(csrf(request))
-    return render_to_response('djurl/index.html', c)
+    return render(request, 'djurl/index.html', c)
 
 
 def redirect_original(request, short_id):
