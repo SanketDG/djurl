@@ -3,13 +3,17 @@
 {% block title %}URL Shortener - Make your URL shorter!{% endblock %}
 
 {% block content %}
-
-<div class="col s12">
-           <input type="text" name="url" id="url" class="form-control input-sm" placeholder="http://www.google.com" />
-       </div>
-       <div class="col s3">
-           {% csrf_token %}
-           <button id="submitButton" class="waves-effect waves-light btn-large blue darken-3">Submit</button>
-       </div>
-   <div class="panel-footer"><a href="#" id="url-result">Enter the URL above and click submit!</a></div>
+<div class="row">
+    <div class="col s12">
+        <input type="text" name="url" id="url" class="form-control input-sm" placeholder="http://www.google.com" />
+        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">assignment</i></a>
+    </div>
+</div>
+<div class="row">
+    <div class="col s4 offset-s4">
+        {% csrf_token %}
+        <button id="submitButton" class="waves-effect waves-light btn-large blue darken-4">Shorten</button>
+    </div>
+</div>
+<div class="panel-footer"><a href="#" id="url-result">Enter the URL above and click submit!</a></div>
 {% endblock %}
