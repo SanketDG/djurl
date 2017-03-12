@@ -88,8 +88,7 @@ SITE_URL = os.getenv("SITE_URL")
 
 # Parse database configuration from $DATABASE_URL
 DATABASES = {}
-DATABASES['default'] = dj_database_url.config(
-    default='postgres://sanket:kamehameha@localhost:5432/urls')
+DATABASES['default'] = dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

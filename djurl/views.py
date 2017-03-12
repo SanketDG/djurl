@@ -4,7 +4,7 @@ import json
 from djurl.models import Url
 from django.http import HttpResponseRedirect, HttpResponse
 from django.conf import settings
-from django.core.context_processors import csrf
+from django.template.context_processors import csrf
 from django.shortcuts import render, get_object_or_404
 
 
