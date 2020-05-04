@@ -6,8 +6,8 @@ urlpatterns = [
    # if the URL pattern match /admin/ then open up admin
    # panel
 
-   url(r'', include(
-       'djurl.urls', namespace='djurl')),
+   url(r'', include((
+       'djurl.urls', 'djurl'), namespace='djurl')),
    # if anything rather then /admin/ then it will look for
    # djurl/urls
 
