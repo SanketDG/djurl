@@ -24,11 +24,18 @@ key features, but nowhere uses and implements some of Django's best features.
 
 I had written this application a few years ago when I had started out with Django,
 and now I am using some of my gained knowledge to improve the tooling of this Django
-application according to some of the modern standards in Python/Django ecosystem.
+application according to some of the modern standards in Python ecosystem.
 
-This is by no means a tutorial on Django or any of its features, it's just a series of
-posts on how to improve tooling to gain a significant improvement on developer
-productivity.
+----
+**Disclaimer**
+
+This is by no means a tutorial on Django or any of its features, nor is it about
+implenting Django best practices.
+
+I do not have any accurate metrics on how useful this is for people other than me,
+these are some of the personal opinions I have while adopting some of the tooling techniques that has popped up in recent years.
+
+----
 
 ## Use poetry for dependency management (or pip-tools)
 
