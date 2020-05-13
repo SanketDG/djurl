@@ -18,6 +18,18 @@ techniques.
 
 ## Introduction
 
+The application in question whose tooling is being attempted to improve,
+is just a simple URL shortener called [djurl](../). It does use some of Django's
+key features, but nowhere uses and implements some of Django's best features.
+
+I had written this application a few years ago when I had started out with Django,
+and now I am using some of my gained knowledge to improve the tooling of this Django
+application according to some of the modern standards in Python/Django ecosystem.
+
+This is by no means a tutorial on Django or any of its features, it's just a series of
+posts on how to improve tooling to gain a significant improvement on developer
+productivity.
+
 ## Use poetry for dependency management (or pip-tools)
 
 ## Easy development environments with Docker and docker-compose
