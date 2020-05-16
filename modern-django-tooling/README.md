@@ -55,6 +55,10 @@ From the [Poetry home page](https://python-poetry.org/)
 
 Let's get started then!
 
+### Installation
+
+Installation is pretty straight forward from the [docs](https://python-poetry.org/docs/#installation)
+
 ----
 **Note**
 
