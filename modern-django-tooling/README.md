@@ -97,6 +97,21 @@ to convert between known Python packaging formats.
 
 ### Install dependencies and create virtualenv
 
+Let's install all the poetry dependencies
+
+```shell
+$ poetry install
+```
+
+Let's take a pause to understand what magic Poetry does here.
+
+Poetry will first install all of the packages listed in `pyproject.toml` in an isolated virtualenv. It will then lock the exact version of all of the packages that were installed and write them to `poetry.lock`.
+
+Why do we even need this `poetry.lock` file? Dependency management y'all!
+Locking the packages to the exact version with which they were developed
+with prevents all kind of problems, including weird version conflicts and
+dependency management across other machines and developers.
+
 ### You do not activate the virtualenv!
 
 ### Extra: pip-tools!
