@@ -66,10 +66,34 @@ This is an opinionated workflow of how to integrate and use Poetry in your Djang
 This is a tricky one! I have searched for tools that would automate this
 process, but sadly there is none that works concretely.
 
+The best way to do this is to just bootstrap a new Poetry project from scratch
+
+```shell
+$ poetry init --no-interaction --dependency django
+```
+
+This will create a new `pyproject.toml` in your project directory. You can pass additional dependencies in the command itself or you can edit the `pyproject.toml`
+file after creation:
+
+```
+[tool.poetry.dependencies]
+python = "^3.6"
+Django = "^3.0.6"
+dj-database-url = "^0.5.0" # added this
+```
+
 [Relevant
 commit](https://github.com/SanketDG/djurl/commit/86d29f453a00c702b35f81b1f27207640d563fb6)
 where I create a pyproject.toml and run `poetry install` (explained in the next
 section)
+
+----
+**Note**
+
+[Dephell](https://dephell.readthedocs.io/cmd-deps-convert.html) is a dedicated tool
+to convert between known Python packaging formats.
+
+----
 
 ### Install dependencies and create virtualenv
 
