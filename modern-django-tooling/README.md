@@ -39,6 +39,44 @@ these are some of the personal opinions I have while adopting some of the toolin
 
 ## Use poetry for dependency management (or pip-tools)
 
+Packaging and dependency management has always been
+[hard in Python](https://blog.ionelmc.ro/2015/02/24/the-problem-with-packaging-in-python/),
+in the past, espescially for beginners.
+
+There have been several efforts by the Python community to standardize
+dependency management and Poetry is one of many such efforts.
+
+From the [Poetry home page](https://python-poetry.org/)
+
+> - Poetry comes with all the tools you might need to manage your projects in a deterministic way.
+> - Easily build and package your projects with a single command.
+> - Make your work known by publishing it to PyPI
+> - Having an insight of your project's dependencies is just one command away.
+
+Let's get started then!
+
+----
+**Note**
+
+This is an opinionated workflow of how to integrate and use Poetry in your Django projects.
+
+----
+### From requirements.txt to pyproject.toml
+
+This is a tricky one! I have searched for tools that would automate this
+process, but sadly there is none that works concretely.
+
+[Relevant
+commit](https://github.com/SanketDG/djurl/commit/86d29f453a00c702b35f81b1f27207640d563fb6)
+where I create a pyproject.toml and run `poetry install` (explained in the next
+section)
+
+### Install dependencies and create virtualenv
+
+### You do not activate the virtualenv!
+
+### Extra: pip-tools!
+
 ## Easy development environments with Docker and docker-compose
 
 ## Integrate static typing with `mypy` and `django-stubs`
