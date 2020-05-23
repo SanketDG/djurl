@@ -120,7 +120,16 @@ dependency management across other machines and developers.
 
 ### You do not activate the virtualenv!
 
-Instead you use poetry's [run]() command. Remember the virtualenv that was created by
+----
+**Note**
+
+If you want the old way of doing things where one would just activate the virtualenv
+to spawn a new shell, see the [poetry shell](https://python-poetry.org/docs/cli/#shell)
+command.
+
+----
+
+Instead you use poetry's [run](https://python-poetry.org/docs/cli/#run) command. Remember the virtualenv that was created by
 poetry in the last step?
 
 `poetry run` will execute the given command in the project's virtualenv.
@@ -136,6 +145,15 @@ you would now have to:
 ```shell
 $ poetry run python manage.py runserver
 ```
+
+----
+**Note**
+
+Even though there is a way to run `scripts` in poetry, it can only run python modules.
+See https://github.com/python-poetry/poetry/issues/241 for methods on how to do implement
+scripts/tasks like npm with custom wrappers.
+
+----
 
 ### Extra: pip-tools!
 
