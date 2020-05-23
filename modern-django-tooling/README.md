@@ -159,6 +159,32 @@ scripts/tasks like npm with custom wrappers.
 
 ## Easy development environments with Docker and docker-compose
 
+----
+**Note**
+
+This will not be a tutorial about `Docker` or `docker-compose`. If you are not familiar
+with either but want to use them,
+[katacoda](https://katacoda.com/courses/container-runtimes) is a good resource to learn
+from.
+
+----
+
+Development environments are hard to keep idempotent in nature. Given the vast amount of
+distributions, operating systems, package managers available out there, it's hard to
+provide a distributable development environment.
+
+Virtual machines solved this problem, but they are way too heavy and clunky for just
+development. Docker containers are lightweight "isolated" environments that are well
+suited for development and one does not need to make changes to the host machine except
+for the ability to run Docker and `docker-compose`.
+
+There are lots of tutorials online for writing a `Dockerfile` for a Django project and a
+corresponding `docker-compose` specification to use multiple services together.
+
+```shell
+$ docker-compose up -d
+```
+
 ## Integrate static typing with `mypy` and `django-stubs`
 
 ## Easy linting with `flake8` and `wemake-python-stylguide`
