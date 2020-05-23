@@ -109,7 +109,9 @@ $ poetry install
 
 Let's take a pause to understand what magic Poetry does here.
 
-Poetry will first install all of the packages listed in `pyproject.toml` in an isolated virtualenv. It will then lock the exact version of all of the packages that were installed and write them to `poetry.lock`.
+Poetry will first install all of the packages listed in `pyproject.toml` in an isolated
+virtualenv. It will then lock the exact version of all of the packages that were installed
+and write them to `poetry.lock`.
 
 Why do we even need this `poetry.lock` file? Dependency management y'all!
 Locking the packages to the exact version with which they were developed
@@ -117,6 +119,23 @@ with prevents all kind of problems, including weird version conflicts and
 dependency management across other machines and developers.
 
 ### You do not activate the virtualenv!
+
+Instead you use poetry's [run]() command. Remember the virtualenv that was created by
+poetry in the last step?
+
+`poetry run` will execute the given command in the project's virtualenv.
+
+So for example, if you want to run the development server, instead of:
+
+```shell
+$ python manage.py runserver
+```
+
+you would now have to:
+
+```shell
+$ poetry run python manage.py runserver
+```
 
 ### Extra: pip-tools!
 
