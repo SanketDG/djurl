@@ -1,0 +1,23 @@
+  version: '3'
+
+  services:
+    db:
+      image: postgres:alpine
+      container_name: djurl_db
+      environment:
+        - POSTGRES_DB=djurl
+        - POSTGRES_USER=djurl
+        - POSTGRES_PASSWORD=djurl
+    web:
+      build: .
+      environment:
+        DATABASE_URL: "postgres://djurl:djurl@db:5432/djurl"
+        DJANGO_SETTINGS_MODULE: "url_shortener.dev_settings"
+        SITE_URL: "http://localhost:8000"
+      command: python manage.py runserver 0.0.0.0:8000
+      volumes:
+        - .:/code
+      ports:
+        - "8000:8000"
+      depends_on:
+        - db
