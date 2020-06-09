@@ -191,6 +191,22 @@ $ docker-compose up -d
 
 ## Opinionated code formatting using _Black_
 
+_Black_ is the opinionated code formatter, something the Python ecosystem has been in need for a long time.
+
+_Black_ has barely any configuration. You just pass a folder (or file)
+and _Black_ formats every file in that folder.
+
+_Black_ also lets you view the changeset that it is going to apply by
+passing `--diff`. This allows for introspection on what exactly will be
+changed.
+
+### How to not pollute git-blame when using _Black_
+
+See https://github.com/psf/black#migrating-your-code-style-without-ruining-git-blame
+
+There is also a pre-commit hook we integrate to run black on every commit
+in the [pre-commit](##automate-typinglintingformatting-on-commit-using-pre-commit) section.
+
 ## Automate typing/linting/formatting on commit using `pre-commit`
 
 ## py.test and GitHub CI integration
