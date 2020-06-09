@@ -11,7 +11,7 @@ from django.shortcuts import render, get_object_or_404
 def index(request):
     c = {}
     c.update(csrf(request))
-    return render(request, 'djurl/index.html', c)
+    return render(request, "djurl/index.html", c)
 
 
 def redirect_original(request, short_id):
@@ -23,8 +23,8 @@ def redirect_original(request, short_id):
 
 
 def shorten_url(request):
-    url = request.POST.get("url", '')
-    if not (url == ''):
+    url = request.POST.get("url", "")
+    if not (url == ""):
         try:
             url_present = Url.objects.get(httpurl=url)
             short_id = url_present.short_id
@@ -34,11 +34,11 @@ def shorten_url(request):
         b.save()
 
         response_data = {}
-        response_data['url'] = settings.SITE_URL + "/" + short_id
-        return HttpResponse(json.dumps(response_data),
-                            content_type="application/json")
-    return HttpResponse(json.dumps({"error": "error occurs"}),
-                        content_type="application/json")
+        response_data["url"] = settings.SITE_URL + "/" + short_id
+        return HttpResponse(json.dumps(response_data), content_type="application/json")
+    return HttpResponse(
+        json.dumps({"error": "error occurs"}), content_type="application/json"
+    )
 
 
 def get_short_code():
@@ -46,7 +46,7 @@ def get_short_code():
     char = string.ascii_uppercase + string.digits + string.ascii_lowercase
     # if the randomly generated short_id is used then generate next
     while True:
-        short_id = ''.join(random.choice(char) for x in range(length))
+        short_id = "".join(random.choice(char) for x in range(length))
         try:
             temp = Url.objects.get(pk=short_id)
             return temp

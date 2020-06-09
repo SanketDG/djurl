@@ -6,20 +6,21 @@ from django.db import models, migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Urls',
+            name="Urls",
             fields=[
-                ('short_id', models.SlugField(max_length=6, serialize=False, primary_key=True)),
-                ('httpurl', models.URLField()),
-                ('pub_date', models.DateTimeField(auto_now=True)),
-                ('count', models.IntegerField(default=0)),
+                (
+                    "short_id",
+                    models.SlugField(max_length=6, serialize=False, primary_key=True),
+                ),
+                ("httpurl", models.URLField()),
+                ("pub_date", models.DateTimeField(auto_now=True)),
+                ("count", models.IntegerField(default=0)),
             ],
-            options={
-            },
+            options={},
             bases=(models.Model,),
         ),
     ]
